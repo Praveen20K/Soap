@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a2c4065c-ee1e-405b-a7a0-75f624483645" activeEnvironment="Default" name="REST Project 1" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="WeatherTest"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="TestcaseWeather"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" id="e7d6b7e4-39cb-461a-b0a0-a1a6724a2f20" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://api.openweathermap.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://api.openweathermap.org</con:endpoint></con:endpoints><con:resource name="Weather" path="/data/2.5/weather" id="92ef6f88-bee2-411f-9c32-76088f9c1395"><con:settings/><con:parameters><con:parameter><con:name>q</con:name><con:value>{city name}</con:value><con:style>QUERY</con:style><con:default>{city name}</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>appid</con:name><con:value>{your api key}</con:value><con:style>QUERY</con:style><con:default>{your api key}</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="GetWeatherByCity" id="e739b2b3-8831-4d8c-9eab-70eba07fabb7" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:weat="http://api.openweathermap.org/data/2.5/weather">weat:Response</con:element></con:representation><con:request name="ReqGetByCity" id="943e355e-9c4e-4794-a808-ff295f2aad66" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.openweathermap.org</con:endpoint><con:request/><con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Chennai"/>
+  <con:entry key="appid" value="a739eaac5ed2579448b7466e9edd4b9c"/>
+</con:parameters><con:parameterOrder><con:entry>q</con:entry><con:entry>appid</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="c6e309dc-af11-4137-96ff-0cf59b94920c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://api.openweathermap.org" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://api.openweathermap.org</con:endpoint></con:endpoints><con:resource name="Weather" path="/data/2.5/weather" id="356e3bfa-2e2c-4b92-af19-84870dcfff0b"><con:settings/><con:parameters><con:parameter><con:name>q</con:name><con:value>{city name},{state code},{country code}</con:value><con:style>QUERY</con:style><con:default>{city name},{state code},{country code}</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>appid</con:name><con:value>{your api key}</con:value><con:style>QUERY</con:style><con:default>{your api key}</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="GetWeatherCityandState" id="f94d2651-f451-49e9-af77-c44f8b140239" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:weat="http://api.openweathermap.org/data/2.5/weather">weat:Response</con:element></con:representation><con:request name="ReqCityandState" id="dc09c97f-8ff6-4d7b-a101-03a5b3764ca9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://api.openweathermap.org</con:endpoint><con:request/><con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Chennai,200,IN"/>
+  <con:entry key="appid" value="a739eaac5ed2579448b7466e9edd4b9c"/>
+</con:parameters><con:parameterOrder><con:entry>q</con:entry><con:entry>appid</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="fb000ec5-902f-4432-9c1b-1afa148be47a" name="WeatherTest"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="17d5f4b1-8fb4-4681-a739-acc0c4e07cba" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestcaseWeather" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="TestWeather" id="8c210eef-9ed3-49f8-acfd-1f9aab97dbef"><con:settings/><con:config service="http://api.openweathermap.org" methodName="GetWeatherByCity" resourcePath="/data/2.5/weather" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="TestWeather" id="10e9e4f2-461a-4e7b-a28c-b00c6eeb3829" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://api.openweathermap.org</con:endpoint><con:request/><con:originalUri>http://api.openweathermap.org/data/2.5/weather</con:originalUri><con:assertion type="JsonPath Match" id="99d0b0ad-db28-41c2-a24d-b619f744ea37" name="JsonPath Match"><con:configuration><path>cod</path><content>200</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="JsonPath Match" id="8b660176-88b5-4b50-b77b-c3a2e77daf64"><con:configuration/></con:assertion><con:assertion type="JsonPath Match" id="ec9bb114-8285-4f9c-89e8-1a6984b25a1e" name="Weather"><con:configuration><path>weather[0].id</path><content>802</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="02bfebe6-dd19-483d-9ad7-e9f945e717e0" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+jsonresponse = messageExchange.response.responseContent
+holdJson = new JsonSlurper().parseText(jsonresponse)
+code = holdJson.sys.country
+log.info code</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters>
+  <con:entry key="q" value="Chennai"/>
+  <con:entry key="appid" value="a739eaac5ed2579448b7466e9edd4b9c"/>
+</con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
